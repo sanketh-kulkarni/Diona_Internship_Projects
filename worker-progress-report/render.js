@@ -1,8 +1,3 @@
-/**
- * Renders the Worker Progress Report from a data object into the
- * #form-root element, split across 3 pages matching the source PDF layout.
- */
-
 function esc(str) {
   const div = document.createElement("div");
   div.textContent = str ?? "";

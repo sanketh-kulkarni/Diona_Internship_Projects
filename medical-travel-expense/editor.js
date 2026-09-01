@@ -1,9 +1,3 @@
-/**
- * Wires up the live editor panel for the Medical & Travel Expense form.
- * Each table section supports adding/removing rows and editing cell
- * values, then re-rendering (which re-paginates automatically).
- */
-
 let currentData = JSON.parse(JSON.stringify(SAMPLE_DATASETS.original));
 
 const SECTION_DEFS = [

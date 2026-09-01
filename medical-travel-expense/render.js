@@ -1,13 +1,3 @@
-/**
- * Renders the Medical & Travel Expense Request from a data object.
- *
- * Unlike the Worker Progress Report (fixed 3 pages), this form's page
- * count depends on how many rows each table has. We build all section
- * blocks first, then flow them onto pages, estimating each block's
- * height so tables don't visually overflow a page — matching how the
- * real PDF re-paginates around table 5/6 when content grows.
- */
-
 function esc(str) {
   const div = document.createElement("div");
   div.textContent = str ?? "";

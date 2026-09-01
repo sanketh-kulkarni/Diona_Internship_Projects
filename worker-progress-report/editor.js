@@ -1,8 +1,3 @@
-/**
- * Wires up the live editor panel: lets the user tweak the current
- * dataset's fields and checkbox selections, then re-render.
- */
-
 let currentData = JSON.parse(JSON.stringify(SAMPLE_DATASETS.original));
 
 function loadDataset(key) {

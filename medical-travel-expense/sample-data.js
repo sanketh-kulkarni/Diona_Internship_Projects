@@ -1,9 +1,3 @@
-/**
- * Sample datasets for the Medical & Travel Expense Request.
- * Every table section is an array of row objects, so each can hold
- * zero, one, or many rows to demonstrate dynamic table rendering.
- */
-
 const SAMPLE_DATASETS = {
   original: {
     claimNo: "20042047",

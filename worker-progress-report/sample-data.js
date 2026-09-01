@@ -1,9 +1,3 @@
-/**
- * Sample datasets for the Worker Progress Report.
- * Each object represents one worker's submitted form.
- * Swap between these via the toolbar dropdown, or edit live in the panel.
- */
-
 const SAMPLE_DATASETS = {
   original: {
     claimNo: "20042047",
