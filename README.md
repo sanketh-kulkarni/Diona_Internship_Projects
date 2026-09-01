@@ -55,10 +55,13 @@ wcb-forms/
 │   ├── base.css            # shared styling for both forms (header, footer,
 │   │                       #   checkboxes, tables, print rules)
 │   └── logo.svg             # recreated WCB-style logo mark (see note below)
-└── docs/
-    ├── ai-prompt-history.md   # full prompt log (see AI usage section)
-    ├── worker-progress-report-video.md   # link to narrated video
-    └── medical-travel-expense-video.md   # link to narrated video
+└── ai-assistance/
+│   ├── ai-prompt-history.md   # full prompt log (see AI usage section)
+│   ├── worker-progress-report-video.md   # link to narrated video
+│   └── medical-travel-expense-video.md   # link to narrated video
+├──video/
+│   ├──worker-progress-report-video.mp4
+│   └──medical-travel-expense-video.mp4
 ```
 
 ## How pagination works
@@ -101,7 +104,7 @@ system) to work from, I made these assumptions:
 AI assistance (Claude) was used during this assignment for planning the
 approach, generating the initial HTML/CSS/JS structure, and the pagination
 estimation logic. The full prompt history is in
-[`docs/ai-prompt-history.md`](./docs/ai-prompt-history.md), and this is also
+[`docs/ai-prompt-history.md`](./ai-assistance/ai-prompt-history.md), and this is also
 called out in both narrated videos as required.
 
 ## Videos
