@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical &amp; Travel Expense Request — WCB Manitoba (Replica)</title>
+  <link rel="stylesheet" href="../assets/base.css" />
+</head>
+<body>
+
+  <div class="toolbar no-print">
+    <h1>Medical &amp; Travel Expense Request — Demo Controls</h1>
+    <select id="dataset-select">
+      <option value="original">Sample: Original (from PDF)</option>
+      <option value="emptyCase">Sample: No expenses submitted</option>
+      <option value="heavyCase">Sample: Many rows (auto re-paginates)</option>
+    </select>
+    <button id="toggle-editor-btn">Edit rows</button>
+    <button id="print-btn" class="primary">Print / Save as PDF</button>
+    <div class="spacer"></div>
+    <span class="hint">6 dynamic tables · page count adjusts automatically</span>
+  </div>
+
+  <div class="editor-panel no-print" id="editor-panel">
+    <h2>Edit current form data</h2>
+
+    <div class="editor-section">
+      <h3>Header</h3>
+      <div class="editor-row">
+        <label style="min-width:110px;">Claim No.</label>
+        <input id="f-claimNo" />
+        <label style="min-width:110px;">Worker name</label>
+        <input id="f-workerName" />
+      </div>
+      <div class="editor-row">
+        <label style="min-width:110px;">Worker App ID</label>
+        <input id="f-workerAppId" />
+        <label style="min-width:110px;">Submitted at</label>
+        <input id="f-submittedAt" />
+      </div>
+    </div>
+
+    <div id="editor-sections"></div>
+
+    <button id="apply-btn" class="add-row" style="padding:8px 16px;font-size:13px;margin-top:8px;">Apply changes</button>
+  </div>
+
+  <div id="form-root"></div>
+
+  <script src="sample-data.js"></script>
+  <script src="render.js"></script>
+  <script src="editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worker Progress Report — WCB Manitoba (Replica)</title>
+  <link rel="stylesheet" href="../assets/base.css" />
+</head>
+<body>
+
+  <div class="toolbar no-print">
+    <h1>Worker Progress Report</h1>
+    <select id="dataset-select">
+      <option value="original">Sample: Original (from PDF)</option>
+      <option value="minimalCase">Sample: Minimal / mostly blank</option>
+      <option value="detailedCase">Sample: Fully detailed case</option>
+    </select>
+    <button id="toggle-editor-btn">Edit fields</button>
+    <button id="print-btn" class="primary">Print / Save as PDF</button>
+    <div class="spacer"></div>
+    <span class="hint">3-page form · dynamic checkboxes, text &amp; dates</span>
+  </div>
+
+  <div class="editor-panel no-print" id="editor-panel">
+    <h2>Edit current form data</h2>
+
+    <div class="editor-section">
+      <h3>Header</h3>
+      <div class="editor-row">
+        <label style="min-width:110px;">Claim No.</label>
+        <input id="f-claimNo" />
+        <label style="min-width:110px;">Worker name</label>
+        <input id="f-workerName" />
+      </div>
+      <div class="editor-row">
+        <label style="min-width:110px;">Worker App ID</label>
+        <input id="f-workerAppId" />
+        <label style="min-width:110px;">Submitted at</label>
+        <input id="f-submittedAt" />
+      </div>
+    </div>
+
+    <div class="editor-section">
+      <h3>Return to Work</h3>
+      <div class="editor-row">
+        <select id="f-rtwStatus">
+          <option value="notMissed">Have not missed time</option>
+          <option value="notReturned">Have not returned</option>
+          <option value="returnedOn">Returned on date</option>
+        </select>
+        <input id="f-rtwDate" placeholder="Return date (if applicable)" />
+      </div>
+      <div class="editor-row">
+        <select id="f-workingType">
+          <option value="fullRegular">Full duties, regular hours</option>
+          <option value="fullReduced">Full duties, reduced hours</option>
+          <option value="modifiedRegular">Modified duties, regular hours</option>
+          <option value="modifiedReduced">Modified duties, reduced hours</option>
+          <option value="other">Other</option>
+        </select>
+        <input id="f-workingOther" placeholder="Other text (if selected)" />
+      </div>
+      <div class="editor-row">
+        <textarea id="f-returnGoing" placeholder="How is return to work going?" rows="2"></textarea>
+      </div>
+      <div class="editor-row">
+        <textarea id="f-concerns" placeholder="Concerns about returning to work" rows="2"></textarea>
+      </div>
+    </div>
+
+    <div class="editor-section">
+      <h3>Recovery</h3>
+      <div class="editor-row">
+        <select id="f-recoveryStatus">
+          <option value="notRecovered">Not fully recovered</option>
+          <option value="fullyRecovered">Fully recovered</option>
+        </select>
+      </div>
+      <div class="editor-row">
+        <textarea id="f-recoveryComments" placeholder="Recovery comments" rows="2"></textarea>
+      </div>
+      <div class="editor-row">
+        <label style="min-width:110px;">Pain scale (1-10)</label>
+        <input id="f-painScale" type="number" min="1" max="10" />
+      </div>
+    </div>
+
+    <div class="editor-section">
+      <h3>Medication &amp; Exercises</h3>
+      <div class="editor-row">
+        <select id="f-medStatus">
+          <option value="notTaking">Not taking medication</option>
+          <option value="taking">Taking medication</option>
+        </select>
+        <input id="f-medName" placeholder="Medication name (if applicable)" />
+      </div>
+      <div class="editor-row">
+        <select id="f-heStatus">
+          <option value="notDoing">Not doing home exercises</option>
+          <option value="doing">Doing home exercises</option>
+        </select>
+      </div>
+      <div class="editor-row">
+        <textarea id="f-heList" placeholder="List of exercises" rows="2"></textarea>
+      </div>
+    </div>
+
+    <div class="editor-section">
+      <h3>Other Information</h3>
+      <div class="editor-row">
+        <textarea id="f-otherInfo" placeholder="Additional information" rows="2"></textarea>
+      </div>
+    </div>
+
+    <button id="apply-btn" class="add-row" style="padding:8px 16px;font-size:13px;">Apply changes</button>
+  </div>
+
+  <div id="form-root"></div>
+
+  <script src="sample-data.js"></script>
+  <script src="render.js"></script>
+  <script src="editor.js"></script>
+</body>
+</html>
